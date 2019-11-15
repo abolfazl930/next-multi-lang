@@ -3,7 +3,7 @@ import { i18n, Link, withTranslation } from '../i18n'
 class Homepage extends React.Component {
   static async getInitialProps() {
     return {
-      namespacesRequired: ['common'],
+      namespacesRequired: ['common']
     }
   }
 
