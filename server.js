@@ -16,6 +16,8 @@ const handle = app.getRequestHandler();
 
   server.get('*', (req, res) => handle(req, res))
 
+  // server.use('/static/', express.static(path.join(__dirname, './public')))
+
   await server.listen(port)
   console.log(`> Ready on http://localhost:${port}`) 
 })()
