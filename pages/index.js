@@ -1,27 +1,29 @@
 import React from 'react'
-// import { i18n, Link, withTranslation } from '../i18n'
-import { i18n, Link, withNamespaces } from '../i18n'
-class Homepage extends React.Component {
-  static async getInitialProps() {
-    return {
-      namespacesRequired: ['common']
-    }
-  }
 
-  render() {
-    console.log('p',this.props)
-    return (
-      <>
-        <div>{this.props.t('h1')}</div>
-        <button
+
+import { i18n, withTranslation } from '../i18n'
+
+const Homepage = ({ t }) => (
+  <>
+    <main>
+   
+      <div>
+        {/* <button
+          type='button'
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
         >
-          Change locale
-        </button>
-      </>
-    )
-  }
-}
+          {t('h1')}
+        </button> */}
+      {t('h1')}
+      </div>
+    </main>
+  
+  </>
+)
 
-export default withNamespaces('common')(Homepage)
-// export default Homepage
+Homepage.getInitialProps = async () => ({
+  namespacesRequired: ['test']
+})
+
+
+export default withTranslation('test')(Homepage)
