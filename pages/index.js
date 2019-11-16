@@ -22,8 +22,8 @@ const Homepage = ({ t }) => (
 )
 
 Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['test']
+  namespacesRequired: ['home']
 })
 
 
-export default withTranslation('test')(Homepage)
+export default withTranslation('home')(Homepage)
