@@ -27,9 +27,9 @@ export default NextI18NextInstance
 export const withTranslation = NextI18NextInstance.withTranslation;
 export const appWithTranslation = NextI18NextInstance.appWithTranslation;
 export const config = NextI18NextInstance.config;
-// export const withNamespaces = NextI18NextInstance.withNamespaces;
-// export const Link = NextI18NextInstance.Link;
-// export const Trans = NextI18NextInstance.Trans;
+export const withNamespaces = NextI18NextInstance.withNamespaces;
+export const Link = NextI18NextInstance.Link;
+export const Trans = NextI18NextInstance.Trans;
 
 
 
