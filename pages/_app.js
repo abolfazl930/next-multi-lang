@@ -15,7 +15,7 @@ class MyApp extends App {
                 <link
                   rel="shortcut icon"
                   type="image/x-icon"
-                  href="public/favicon.ico"
+                  href="/favicon.ico"
                 />
       </Head>
            

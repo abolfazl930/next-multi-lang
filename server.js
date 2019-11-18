@@ -17,11 +17,11 @@ var path = require('path');
 
   // server.use('/static/', express.static(path.join(__dirname, './public')))
   // server.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-  server.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+  // server.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
-  server.use(nextI18NextMiddleware(nextI18next))
-
+  
   server.get('*', (req, res) => handle(req, res))
+  server.use(nextI18NextMiddleware(nextI18next))
 
   
   await server.listen(port)
