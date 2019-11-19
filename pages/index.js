@@ -1,5 +1,6 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
 
 import { i18n, withTranslation } from '../i18n'
 
@@ -24,6 +25,8 @@ const Homepage = ({ t }) => (
 Homepage.getInitialProps = async () => ({
   namespacesRequired: ['home']
 })
-
+Homepage.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 export default withTranslation('home')(Homepage)
