@@ -27,13 +27,7 @@ const NextI18NextInstance  = new NextI18Next({
   // } = NextI18NextInstance
   
   
-export default NextI18NextInstance 
-export const appWithTranslation = NextI18NextInstance.appWithTranslation;
-export const withTranslation = NextI18NextInstance.withTranslation;
-export const config = NextI18NextInstance.config;
-export const withNamespaces = NextI18NextInstance.withNamespaces;
-export const Link = NextI18NextInstance.Link;
-export const Trans = NextI18NextInstance.Trans;
+  module.exports = NextI18NextInstance;
 
 
 
