@@ -13,7 +13,7 @@ const handle = app.getRequestHandler();
   const server = express()
 
   server.use(nextI18NextMiddleware(nextI18next))
-
+  server.use("/public", express.static("public"));
   server.get('*', (req, res) => handle(req, res))
 
   await server.listen(port)

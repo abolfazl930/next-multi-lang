@@ -9,12 +9,12 @@ const Homepage = ({ t }) => (
     <main>
    
       <div>
-        {/* <button
+        <button
           type='button'
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
         >
           {t('h1')}
-        </button> */}
+        </button>
       {t('h1')}
       </div>
     </main>
