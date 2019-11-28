@@ -1,29 +1,25 @@
-  
-import React from 'react'
-import App from 'next/app'
+import React from "react";
+import App from "next/app";
 import Head from "next/head";
 
-import { appWithTranslation } from '../i18n'
+import { appWithTranslation } from "../i18n";
+import Layout from "../components/layout";
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
     return (
       <>
-      <Head>
+        <Layout>
+          <Head>
+            <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          </Head>
 
-                <link
-                  rel="shortcut icon"
-                  type="image/x-icon"
-                  href="/favicon.ico"
-                />
-      </Head>
-           
-      <Component {...pageProps} />
+          <Component {...pageProps} />
+        </Layout>
       </>
-
-    )
+    );
   }
 }
 
-export default appWithTranslation(MyApp)
+export default appWithTranslation(MyApp);

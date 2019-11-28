@@ -1,32 +1,22 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import { i18n, withTranslation } from '../i18n'
+import { withTranslation } from "../i18n";
 
 const Homepage = ({ t }) => (
   <>
     <main>
-   
-      <div>
-        <button
-          type='button'
-          onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
-        >
-          {t('h1')}
-        </button>
-      {t('h1')}
-      </div>
+      <h1>{t("h1")}</h1>
     </main>
-  
   </>
-)
+);
 
 Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['home']
-})
-Homepage.propTypes = {
-  t: PropTypes.func.isRequired,
-}
+  namespacesRequired: ["home", "nav"]
+});
+// Homepage.propTypes = {
+//   t: PropTypes.func.isRequired,
+// }
 
-export default withTranslation('home')(Homepage)
+export default withTranslation("home")(Homepage);
