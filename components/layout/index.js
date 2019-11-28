@@ -13,7 +13,6 @@ const Layout = props => {
             fa
           </button>
         </div>
-
         <ul>
           <li>
             <Link href="/">
